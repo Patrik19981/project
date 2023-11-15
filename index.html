@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management System</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        section {
+            margin-bottom: 30px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #3498db;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #3498db;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+
+        pre {
+            background-color: #ecf0f1;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        #search-form {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+<!-- Author Section -->
+<section id="author-section">
+    <h2>Author</h2>
+    <img id="author-photo" src="path/to/your/photo.jpg" alt="Author Photo">
+    <p><strong>Name:</strong> Patrik</p>
+    <p><strong>Field of Study:</strong> Computer Science</p>
+    <p><strong>Studies:</strong> Currently pursuing a degree in Computer Science with a focus on [specific area].</p>
+    <p><strong>Why Computer Science:</strong> I chose Computer Science because...</p>
+    <p><strong>Expectations:</strong> I expect to gain a deep understanding of [specific area of study] and apply my knowledge to real-world problems.</p>
+    <p><strong>Achievements:</strong> I have achieved [mention any notable achievements or projects].</p>
+    <p><strong>Career Plans:</strong> In the future, I plan to [mention your career aspirations or plans].</p>
+    <p><strong>Hobbies:</strong> Outside of my studies, I enjoy [mention your hobbies].</p>
+</section>
+
+<!-- Data Section -->
+<section id="data">
+    <h2>Data</h2>
+    <p>
+        The dataset represents a task management system. It includes information
+        such as TaskID, TaskName, TaskDescription, Date, EstimatedHours, ActualHours,
+        Completed status, Priority, TeamLeader, and Amount in PLN.
+    </p>
+
+    <!-- Table with first 10 rows of data -->
+    <table>
+        <tr>
+            <th>TaskID</th>
+            <th>TaskName</th>
+            <th>TaskDescription</th>
+            <th>Date</th>
+            <th>EstimatedHours</th>
+            <th>ActualHours</th>
+            <th>Completed</th>
+            <th>Priority</th>
+            <th>TeamLeader</th>
+            <th>AmountPLN</th>
+        </tr>
+        <!-- Add data rows here -->
+        <tr>
+            <td>1</td>
+            <td>Human Resources</td>
+            <td>Submit task C</td>
+            <td>11/22/2005</td>
+            <td>12</td>
+            <td>12</td>
+            <td>false</td>
+            <td>medium</td>
+            <td>Gratiana Micco</td>
+            <td>3204</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Human Resources</td>
+            <td>Submit task C</td>
+            <td>11/22/2005</td>
+            <td>12</td>
+            <td>12</td>
+            <td>false</td>
+            <td>medium</td>
+            <td>Gratiana Micco</td>
+            <td>3204</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Training</td>
+            <td>Submit task C</td>
+            <td>9/15/2008</td>
+            <td>11</td>
+            <td>13</td>
+            <td>false</td>
+            <td>normal</td>
+            <td>Silvano Arnli</td>
+            <td>1444</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Support</td>
+            <td>Complete task A</td>
+            <td>11/9/2000</td>
+            <td>44</td>
+            <td>8</td>
+            <td>true</td>
+            <td>high</td>
+            <td>Janith Cosgrive</td>
+            <td>926</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Business Development</td>
+            <td>Submit task C</td>
+            <td>7/1/2017</td>
+            <td>33</td>
+            <td>7</td>
+            <td>true</td>
+            <td>medium</td>
+            <td>Katheryn Castanho</td>
+            <td>2310</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Support</td>
+            <td>Update task D</td>
+            <td>1/7/2012</td>
+            <td>10</td>
+            <td>11</td>
+            <td>false</td>
+            <td>urgent</td>
+            <td>Orelie Lisciardelli</td>
+            <td>1840</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Business Development</td>
+            <td>Review task B</td>
+            <td>12/13/2006</td>
+            <td>37</td>
+            <td>5</td>
+            <td>true</td>
+            <td>moderate</td>
+            <td>Teriann Grinston</td>
+            <td>2830</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Product Management</td>
+            <td>Assign task E</td>
+            <td>8/8/2010</td>
+            <td>50</td>
+            <td>10</td>
+            <td>false</td>
+            <td>maximum</td>
+            <td>Timmi Worman</td>
+            <td>3149</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Business Development</td>
+            <td>Submit task C</td>
+            <td>10/11/2002</td>
+            <td>8</td>
+            <td>7</td>
+            <td>false</td>
+            <td>maximum</td>
+            <td>Elisha Fallen</td>
+            <td>622</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Training</td>
+            <td>Update task D</td>
+            <td>2/13/2016</td>
+            <td>37</td>
+            <td>16</td>
+            <td>false</td>
+            <td>critical</td>
+            <td>Emeline Gainsford</td>
+            <td>2845</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Business Development</td>
+            <td>Assign task E</td>
+            <td>10/10/2001</td>
+            <td>44</td>
+            <td>14</td>
+            <td>false</td>
+            <td>essential</td>
+            <td>Alonso Stride</td>
+            <td>2367</td>
+        </tr>
+        
+
+    </table>
+
+    <!-- Description of XML, CSV, JSON formats -->
+    <div>
+        <h3>XML Format</h3>
+        <p>
+            XML (eXtensible Markup Language) is a markup language that defines rules
+            for encoding documents in a format that is both human-readable and
+            machine-readable.
+        </p>
+    </div>
+
+    <div>
+        <h3>CSV Format</h3>
+        <p>
+            CSV (Comma-Separated Values) is a plain text format that uses commas to
+            separate values. It is a common format for exchanging data between
+            applications.
+        </p>
+    </div>
+
+    <div>
+        <h3>JSON Format</h3>
+        <p>
+            JSON (JavaScript Object Notation) is a lightweight data-interchange format
+            that is easy for humans to read and write. It is also easy for machines to
+            parse and generate.
+        </p>
+    </div>
+
+    <!-- Buttons to trigger display functions -->
+    <button onclick="displayXML()">Show XML</button>
+    <button onclick="displayCSV()">Show CSV</button>
+    <button onclick="displayJSON()">Show JSON</button>
+
+    <!-- Display areas for XML, CSV, JSON content -->
+    <div>
+        <h3>XML Content</h3>
+        <pre id="xmlContent"></pre>
+    </div>
+
+    <div>
+        <h3>CSV Content</h3>
+        <pre id="csvContent"></pre>
+    </div>
+
+    <div>
+        <h3>JSON Content</h3>
+        <pre id="jsonContent"></pre>
+    </div>
+</section>
+
+<!-- Internet Section -->
+<section id="internet-section">
+    <h2>Internet</h2>
+    <p>Search the web for information related to:</p>
+    <!-- Form to search the web using DuckDuckGo as an example -->
+    <form id="search-form" action="https://duckduckgo.com/">
+        <label for="search-query">What are you looking for:</label><br>
+        <input type="text" id="search-query" name="q" value=""><br>
+        <input type="submit" value="Search">
+    </form>
+</section>
+
+<!-- Add your JavaScript file here -->
+<script src="javascript.js"></script>
+
+</body>
+</html>
